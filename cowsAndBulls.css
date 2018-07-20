@@ -143,3 +143,12 @@ button {
   width: 200px;
   height: 50px;
 }
+
+#giveUp {
+  background: linear-gradient(to right, #939393, #acacac);
+  width: 80px;
+  height: 30px;
+  position: relative;
+  left: 60px;
+  font-size: 100%;
+}
