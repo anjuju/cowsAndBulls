@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cows and Bulls Game</title>
+  <meta charset="utf-8"/>
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" type="text/css" href="cowsAndBulls.css">
+</head>
+
+<body>
+  <div id='body'>
+    <div id='header'>
+      <h1>Cows and Bulls Game</h1>
+      <div id='images'>
+        <img src="img/cow.png" alt="cow" id="cow">
+        <img src="img/bull.jpg" alt="bull" id="bull">
+      </div>
+    </div>
+    <div id='rules'>
+      <h2>Rules</h2>
+      <ul>
+        <li>A random 4-digit number will be created between 0000 and 9999 (inclusive).</li>
+        <li>Try to guess the number.</li>
+        <li>For every digit that you guess correctly in the correct place, you have a “cow”.</li>
+        <li>For every digit you guess correctly in the wrong place is a “bull.”</li>
+      </ul>
+    </div>
+    <br><br>
+    <div class='guessInput'>
+      <input type="number" id='guess' value='0000'>
+      <button id='guessButton'>Guess</button>
+    </div>
+    <br><br><br>
+    <div class='outcome'>
+      <p id='outcome'></p>
+      <p id='congrats'></p>
+      <p id='actual'></p>
+      <p id='tries'></p>
+    </div>
+    <div id='retry'>
+      <button id='retryButton'>New Number</button>
+    </div>
+  </div>
+
+  <script type='text/javascript' src='cowsAndBulls.js'></script>
+</body>
+</html>
