@@ -31,7 +31,7 @@ guessButton.addEventListener('click', function() {
       text = cows + ' cows, ' + bulls + ' bulls';
     }
     document.getElementById('outcome').innerHTML = text;
-    console.log("Guess: " + guessStr + ", " + text);
+    console.log("Guess: " + guessStr + " --> " + text);
 
     tries += 1;
 
@@ -45,6 +45,7 @@ guessButton.addEventListener('click', function() {
 
 var retryButton = document.getElementById('retryButton');
 retryButton.addEventListener('click', function() {
+  console.log("New Number");
   number = Math.floor(Math.random()*10000);
   //console.log(number);
   document.getElementById("guess").value = "0000";
@@ -53,4 +54,15 @@ retryButton.addEventListener('click', function() {
   document.getElementById('actual').innerHTML = '';
   document.getElementById('tries').innerHTML = '';
   tries = 0;
+});
+
+var giveUp = document.getElementById('giveUp');
+giveUp.addEventListener('click', function() {
+  var numberStr = number.toString();
+  if (number < 1000) {
+    numberStr = numberStr.padStart(4,"0");
+  }
+  document.getElementById('congrats').innerHTML = 'You were so close!';
+  document.getElementById('actual').innerHTML = 'The number was ' + numberStr + '.';
+  document.getElementById('tries').innerHTML = 'You tried ' + tries + ' times.';
 });
